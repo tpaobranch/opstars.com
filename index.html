@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Opstars is an adults-only creator discovery platform.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Opstars | Adult Creator Platform</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <!-- Age verification -->
+  <div class="age-overlay" id="ageOverlay" role="dialog"
+       aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-box">
+      <div class="brand age-brand">op<span>stars</span></div>
+      <div class="age-symbol">18+</div>
+      <h1 id="ageTitle">Adults only</h1>
+      <p>
+        Opstars is intended exclusively for adults aged 18 or older,
+        or the higher legal age applicable in your location.
+      </p>
+      <button class="primary-btn" id="confirmAge">
+        I confirm I am of legal age
+      </button>
+      <button class="secondary-btn" id="leaveSite">
+        Leave website
+      </button>
+      <small>
+        By entering, you confirm that accessing this content is lawful
+        where you live.
+      </small>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Opstars home">
+      op<span>stars</span><i>.</i>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Discover</a>
+      <a href="#creators" class="nav-link">Creators</a>
+      <a href="#categories" class="nav-link">Categories</a>
+    </nav>
+
+    <a class="creator-link" href="#join">Join as a creator ↗</a>
+    <button class="mobile-menu" id="mobileMenu"
+            aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow">THE CREATOR DISCOVERY PLATFORM</span>
+        <h1>Discover creators.<br><span>Explore Opstars.</span></h1>
+        <p>
+          Explore creator profiles and discover content from adults
+          who choose to share their work.
+        </p>
+        <a href="#creators" class="primary-btn hero-btn">
+          Explore creators <span>→</span>
+        </a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-card">
+          <span class="art-star">✦</span>
+          <span class="art-label">YOUR NEXT DISCOVERY</span>
+          <strong>Meet<br>Opstars.</strong>
+          <span class="art-bottom">CREATORS • COMMUNITY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search -->
+    <section class="discovery section-wrap" id="creators">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FIND YOUR INTEREST</span>
+          <h2>Discover content</h2>
+        </div>
+        <span class="result-count" id="resultCount">6 creators</span>
+      </div>
+
+      <div class="search-bar">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" id="searchInput"
+               placeholder="Search creators or content..."
+               aria-label="Search creators or content">
+        <button id="clearSearch" class="clear-search" hidden
+                aria-label="Clear search">×</button>
+      </div>
+
+      <!-- Categories -->
+      <div class="category-list" id="categories"
+           aria-label="Filter by category">
+        <button class="category-btn selected" data-category="All">All</button>
+        <button class="category-btn" data-category="Featured">Featured</button>
+        <button class="category-btn" data-category="Lifestyle">Lifestyle</button>
+        <button class="category-btn" data-category="Fitness">Fitness</button>
+        <button class="category-btn" data-category="Fashion">Fashion</button>
+        <button class="category-btn" data-category="Entertainment">Entertainment</button>
+      </div>
+
+      <!-- Creator cards are populated by index.js -->
+      <div class="creator-grid" id="creatorGrid" aria-live="polite"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">⌕</div>
+        <h3>No creators found</h3>
+        <p>Try another search or choose a different category.</p>
+        <button class="secondary-btn" id="resetFilters">Clear filters</button>
+      </div>
+    </section>
+
+    <!-- Creator call to action -->
+    <section class="join-section section-wrap" id="join">
+      <div>
+        <span class="eyebrow">MADE FOR CREATORS</span>
+        <h2>Your content.<br>Your creative space.</h2>
+        <p>
+          Build your presence on Opstars. Publish content you own or
+          are authorized to share, and respect your audience's privacy.
+        </p>
+      </div>
+      <div class="join-action">
+        <span class="join-star">✳</span>
+        <p>Ready to be discovered?</p>
+        <a href="mailto:creators@example.com?subject=Opstars%20Creator%20Inquiry"
+           class="primary-btn">Creator inquiries ↗</a>
+        <small>Replace this demo email with your official contact address.</small>
+      </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="safety-section section-wrap">
+      <div class="safety-item">
+        <span class="safety-icon">18+</span>
+        <div>
+          <h3>Adults only</h3>
+          <p>Intended for adults of legal age. Never publish content involving minors.</p>
+        </div>
+      </div>
+      <div class="safety-item">
+        <span class="safety-icon">✓</span>
+        <div>
+          <h3>Consent matters</h3>
+          <p>Publish only content you own or are authorized to distribute, with documented consent from all participants.</p>
+        </div>
+      </div>
+      <div class="safety-item">
+        <span class="safety-icon">◇</span>
+        <div>
+          <h3>Respect privacy</h3>
+          <p>Protect personal information and honor requests concerning unauthorized or non-consensual content.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <a class="brand" href="#">op<span>stars</span><i>.</i></a>
+    <p>© <span id="currentYear"></span> Opstars. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="mailto:privacy@example.com">Privacy</a>
+      <a href="mailto:support@example.com">Contact</a>
+      <a href="#home">Back to top ↑</a>
+    </div>
+    <p class="footer-note">
+      Adults only. Follow applicable laws, platform rules, and content-consent requirements.
+    </p>
+  </footer>
+
+  <!-- Preview modal -->
+  <div class="preview-overlay" id="previewOverlay" hidden>
+    <div class="preview-dialog" role="dialog" aria-modal="true"
+         aria-labelledby="previewTitle">
+      <button class="preview-close" id="closePreview"
+              aria-label="Close preview">×</button>
+      <div id="previewContent"></div>
+    </div>
+  </div>
+
+</body>
+</html>
