@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Apply to become an Opstars creator.">
+  <title>Join as a Creator | Opstars</title>
+  <link rel="stylesheet" href="join.css">
+  <script src="join.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">op<span>stars</span>.</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="creators.html">Creators</a>
+      <a href="categories.html">Categories</a>
+      <a class="active" href="join.html">Join as a creator</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR CREATIVE JOURNEY STARTS HERE</p>
+      <h1>Become an <span>Opstars creator.</span></h1>
+      <p>
+        Introduce yourself, share your creative interests, and register
+        your interest in joining the Opstars community.
+      </p>
+      <a href="#application" class="primary-button">Start your application ↓</a>
+    </section>
+
+    <section class="benefits">
+      <article class="benefit-card">
+        <span class="benefit-icon">✦</span>
+        <h3>Build your presence</h3>
+        <p>Introduce your style, interests, and creative identity.</p>
+      </article>
+      <article class="benefit-card">
+        <span class="benefit-icon">♡</span>
+        <h3>Find your audience</h3>
+        <p>Help people discover your work and interests.</p>
+      </article>
+      <article class="benefit-card">
+        <span class="benefit-icon">◇</span>
+        <h3>Create responsibly</h3>
+        <p>Respect consent, privacy, and the rights of others.</p>
+      </article>
+    </section>
+
+    <section class="application-section" id="application">
+      <div class="application-intro">
+        <p class="eyebrow">CREATOR APPLICATION</p>
+        <h2>Let's get to know you.</h2>
+        <p>
+          Complete this sample application to see how the form works.
+          Your details will not be sent or stored by this demo.
+        </p>
+
+        <div class="notice">
+          <strong>Before you apply</strong>
+          <p>
+            Applicants must be adults of legal age. Any adult content
+            must be lawful, consensual, and authorized for publication.
+          </p>
+        </div>
+
+        <a class="back-link" href="creators.html">← Explore creators</a>
+      </div>
+
+      <form class="application-form" id="creatorForm">
+        <div class="form-heading">
+          <h3>Creator details</h3>
+          <p>Fields marked * are required.</p>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="creatorName">Display name *</label>
+            <input id="creatorName" name="creatorName"
+              type="text" maxlength="60" autocomplete="nickname"
+              placeholder="Your creator name" required>
+          </div>
+
+          <div class="field">
+            <label for="creatorEmail">Email address *</label>
+            <input id="creatorEmail" name="creatorEmail"
+              type="email" maxlength="254" autocomplete="email"
+              placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="creatorCategory">Main category *</label>
+          <select id="creatorCategory" name="creatorCategory" required>
+            <option value="">Select a category</option>
+            <option value="Lifestyle">Lifestyle</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Photography">Photography</option>
+            <option value="Music">Music</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Art & Design">Art & Design</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="creatorBio">Tell us about your work *</label>
+          <textarea id="creatorBio" name="creatorBio"
+            rows="5" maxlength="700"
+            placeholder="Describe your creative interests and the content you plan to make..."
+            required></textarea>
+          <div class="character-count">
+            <span id="bioCount">0</span>/700 characters
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="creatorLink">Portfolio or social link (optional)</label>
+          <input id="creatorLink" name="creatorLink" type="url"
+            maxlength="500" placeholder="https://example.com">
+          <small>Enter a public link you control.</small>
+        </div>
+
+        <div class="check-group">
+          <label class="check-label">
+            <input type="checkbox" id="adultConfirm" required>
+            <span>I confirm that I am at least 18 years old, or the legal adult age in my jurisdiction if higher. *</span>
+          </label>
+
+          <label class="check-label">
+            <input type="checkbox" id="rightsConfirm" required>
+            <span>I will only submit or publish content I own or am authorized to use, with all required consent. *</span>
+          </label>
+
+          <label class="check-label">
+            <input type="checkbox" id="termsConfirm" required>
+            <span>I understand that this is a demo form and that submitting it does not create an account or guarantee acceptance. *</span>
+          </label>
+        </div>
+
+        <button type="submit" class="primary-button submit-button">
+          Validate application
+        </button>
+
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+
+        <p class="privacy-note">
+          Demo only: do not enter sensitive personal information.
+          No application data is transmitted by this form.
+        </p>
+      </form>
+    </section>
+
+    <section class="faq-section">
+      <p class="eyebrow">GOOD TO KNOW</p>
+      <h2>Before joining</h2>
+
+      <details>
+        <summary>Does this form create my creator account?</summary>
+        <p>
+          No. It validates the information in your browser only.
+          A secure backend and account system are needed to register creators.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I publish adult content?</summary>
+        <p>
+          Only where permitted by the hosting provider and applicable laws.
+          Content must involve consenting adults, be authorized for publication,
+          and meet all required age-verification and moderation rules.
+        </p>
+      </details>
+
+      <details>
+        <summary>Can I earn money through Opstars?</summary>
+        <p>
+          Monetization is not connected in this prototype. It requires
+          approved payment services, appropriate creator verification,
+          and secure backend development.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">op<span>stars</span>.</a>
+    <p>© <span id="year"></span> Opstars. All rights reserved.</p>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="creators.html">Creators</a>
+      <a href="categories.html">Categories</a>
+    </div>
+    <small>Adults only. Respect consent, privacy, and applicable laws.</small>
+  </footer>
+</body>
+</html>
