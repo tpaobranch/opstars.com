@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Explore creator categories on Opstars.">
+  <title>Categories | Opstars</title>
+  <link rel="stylesheet" href="categories.css">
+  <script src="categories.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">op<span>stars</span>.</a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="index.html#discover">Discover</a>
+      <a href="creators.html">Creators</a>
+      <a class="active" href="categories.html">Categories</a>
+      <a class="join-link" href="index.html#join">Join as a creator ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">EXPLORE YOUR INTERESTS</p>
+      <h1>Find your <span>category.</span></h1>
+      <p>
+        Explore creative interests, discover new profiles, and find
+        content categories that inspire you.
+      </p>
+      <a href="#categoryDirectory" class="primary-button">
+        Explore categories ↓
+      </a>
+    </section>
+
+    <section class="category-section" id="categoryDirectory">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE OPSTARS</p>
+          <h2>Browse categories</h2>
+          <p>Choose an interest to explore its sample creator profiles.</p>
+        </div>
+        <span id="categoryCount" class="result-count">0 categories</span>
+      </div>
+
+      <label class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="categorySearch" type="search"
+          placeholder="Search categories..."
+          aria-label="Search categories">
+        <button id="clearSearch" type="button"
+          aria-label="Clear search">×</button>
+      </label>
+
+      <div class="filter-bar" aria-label="Category filters">
+        <button class="filter active" data-filter="All">All categories</button>
+        <button class="filter" data-filter="Popular">Popular</button>
+        <button class="filter" data-filter="Creative">Creative</button>
+        <button class="filter" data-filter="Lifestyle">Lifestyle</button>
+      </div>
+
+      <div class="category-grid" id="categoryGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <div class="empty-icon">⌕</div>
+        <h3>No categories found</h3>
+        <p>Try a different search term or filter.</p>
+        <button class="primary-button" id="resetFilters" type="button">
+          Reset filters
+        </button>
+      </div>
+
+      <p class="demo-note">
+        Category listings are examples for the Opstars website prototype.
+      </p>
+    </section>
+
+    <section class="creator-banner">
+      <div>
+        <p class="eyebrow">YOUR INTEREST. YOUR COMMUNITY.</p>
+        <h2>Discover something <span>new.</span></h2>
+        <p>
+          Browse creator profiles and explore a range of creative
+          interests in one place.
+        </p>
+      </div>
+      <a href="creators.html" class="primary-button">
+        Browse creators ↗
+      </a>
+    </section>
+
+    <section class="safety-section">
+      <h2>Explore responsibly</h2>
+      <div class="safety-grid">
+        <article>
+          <span class="safety-icon">18+</span>
+          <h3>Adults only</h3>
+          <p>Any adult-content area must be restricted to adults of legal age.</p>
+        </article>
+        <article>
+          <span class="safety-icon">✓</span>
+          <h3>Respect consent</h3>
+          <p>Only publish content you own or have permission to share.</p>
+        </article>
+        <article>
+          <span class="safety-icon">◇</span>
+          <h3>Protect privacy</h3>
+          <p>Respect personal information and content removal requests.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="index.html">op<span>stars</span>.</a>
+    <p>© <span id="year"></span> Opstars. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="creators.html">Creators</a>
+      <a href="mailto:privacy@example.com">Privacy</a>
+      <a href="mailto:support@example.com">Contact</a>
+    </div>
+    <small>Adults only. Follow applicable laws and content-consent requirements.</small>
+  </footer>
+</body>
+</html>
