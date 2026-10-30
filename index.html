@@ -121,7 +121,7 @@
         <button class="secondary-btn" id="resetFilters">Clear filters</button>
       </div>
     </section>
-
+    
     <!-- Creator call to action -->
     <section class="join-section section-wrap" id="join">
       <div>
@@ -133,81 +133,6 @@
         </p>
       </div>
 
-      <!-- Adult Content Gallery -->
-<section class="content-gallery section-wrap" id="mediaGallery">
-
-  <div class="section-heading">
-    <div>
-      <span class="eyebrow">EXPLORE OPSTARS</span>
-      <h2>Photos & Videos</h2>
-      <p>Discover content from Opstars creators.</p>
-    </div>
-  </div>
-
-  <!-- Gallery Tabs -->
-  <div class="gallery-tabs">
-    <button onclick="showGallery('photos')">Photos</button>
-    <button onclick="showGallery('videos')">Videos</button>
-  </div>
-
-  <!-- Upload Video -->
-  <div class="video-upload-box">
-    <h3>Upload Your Video</h3>
-    <p>Select a video from your device.</p>
-
-    <input
-      type="file"
-      id="videoUpload"
-      accept="video/mp4,video/webm"
-    >
-
-    <button class="primary-btn" id="uploadButton">
-      Upload Video ↑
-    </button>
-
-    <p id="uploadStatus" aria-live="polite"></p>
-  </div>
-
-  <!-- Photos -->
-  <div class="media-grid" id="photos">
-
-    <div class="media-card">
-      <img src="images/photo1.jpg" alt="Creator photo">
-      <span>Photo</span>
-    </div>
-
-    <div class="media-card">
-      <img src="images/photo2.jpg" alt="Creator photo">
-      <span>Photo</span>
-    </div>
-
-  </div>
-
-  <!-- Videos -->
-  <div class="media-grid" id="videos" hidden>
-
-    <div class="media-card">
-      <video controls preload="metadata">
-        <source src="videos/video1.mp4" type="video/mp4">
-      </video>
-      <span>Featured Video 01</span>
-    </div>
-
-    <div class="media-card">
-      <video controls preload="metadata">
-        <source src="videos/video2.mp4" type="video/mp4">
-      </video>
-      <span>Featured Video 02</span>
-    </div>
-
-    <div id="uploadedVideos"></div>
-
-  </div>
-
-</section>
-
-</section>
-      
       <div class="join-action">
         <span class="join-star">✳</span>
         <p>Ready to be discovered?</p>
@@ -217,6 +142,54 @@
       </div>
     </section>
 
+    <!-- Adult Content Gallery -->
+    <section class="content-gallery section-wrap" id="mediaGallery">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE OPSTARS</span>
+          <h2>Photos & Videos</h2>
+          <p>Discover content from Opstars creators.</p>
+        </div>
+      </div>
+
+      <div class="gallery-tabs">
+        <button type="button" onclick="showGallery('photos')">Photos</button>
+        <button type="button" onclick="showGallery('videos')">Videos</button>
+      </div>
+
+      <!-- Photos -->
+      <div class="media-grid" id="photos">
+        <div class="media-card">
+          <img src="images/photo1.jpg" alt="Creator photo">
+          <span>Photo</span>
+        </div>
+
+        <div class="media-card">
+          <img src="images/photo2.jpg" alt="Creator photo">
+          <span>Photo</span>
+        </div>
+      </div>
+
+      <!-- Videos -->
+      <div class="media-grid" id="videos" hidden>
+        <div class="media-card">
+          <video controls preload="metadata">
+            <source src="videos/video1.mp4" type="video/mp4">
+          </video>
+          <span>Featured Video 01</span>
+        </div>
+
+        <div class="media-card">
+          <video controls preload="metadata">
+            <source src="videos/video2.mp4" type="video/mp4">
+          </video>
+          <span>Featured Video 02</span>
+        </div>
+      </div>
+
+    </section>
+    
     <!-- Safety -->
     <section class="safety-section section-wrap">
       <div class="safety-item">
