@@ -407,3 +407,11 @@ document.getElementById("currentYear").textContent =
 
 renderCreators();
 initializeAgeGate();
+
+function showGallery(type) {
+  document.getElementById("photos").hidden =
+    type !== "photos";
+
+  document.getElementById("videos").hidden =
+    type !== "videos";
+}
