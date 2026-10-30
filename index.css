@@ -976,3 +976,60 @@ input:focus-visible {
     animation-duration: 0.01ms !important;
   }
 }
+
+.content-gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gallery-tabs {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.gallery-tabs button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #111;
+}
+
+.media-card img,
+.media-card video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-card span {
+  display: block;
+  color: white;
+  padding: 12px;
+}
+
+@media (max-width: 650px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .media-card img,
+  .media-card video {
+    height: 190px;
+  }
+}
