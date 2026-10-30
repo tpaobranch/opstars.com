@@ -416,71 +416,11 @@ function showGallery(type) {
     type !== "videos";
 }
 
-
-// Switch between photos and videos
+// Switch between Photos and Videos
 function showGallery(type) {
-
   document.getElementById("photos").hidden =
     type !== "photos";
 
   document.getElementById("videos").hidden =
     type !== "videos";
 }
-
-
-// Video upload preview
-const videoUpload =
-  document.getElementById("videoUpload");
-
-const uploadButton =
-  document.getElementById("uploadButton");
-
-const uploadedVideos =
-  document.getElementById("uploadedVideos");
-
-const uploadStatus =
-  document.getElementById("uploadStatus");
-
-
-uploadButton.addEventListener("click", function () {
-
-  const file = videoUpload.files[0];
-
-  if (!file) {
-    uploadStatus.textContent =
-      "Please select a video first.";
-    return;
-  }
-
-  if (!["video/mp4", "video/webm"].includes(file.type)) {
-    uploadStatus.textContent =
-      "Please select an MP4 or WebM video.";
-    return;
-  }
-
-  const videoURL = URL.createObjectURL(file);
-
-  const card = document.createElement("div");
-  card.className = "media-card";
-
-  const video = document.createElement("video");
-  video.src = videoURL;
-  video.controls = true;
-  video.preload = "metadata";
-
-  const title = document.createElement("span");
-  title.textContent = file.name;
-
-  card.appendChild(video);
-  card.appendChild(title);
-
-  uploadedVideos.appendChild(card);
-
-  showGallery("videos");
-
-  uploadStatus.textContent =
-    "Video preview added successfully!";
-
-  videoUpload.value = "";
-
-});
